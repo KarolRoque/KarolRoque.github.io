@@ -1,1 +1,401 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Página personal de Karol Roque Ramos, estudiante de Administración de Negocios en la Universidad Católica San Pablo (Arequipa, Perú)." />
+  <title>Karol Roque Ramos | Página Personal</title>
+  <style>
+    :root {
+      --arena: #cfc2af;
+      --arena-claro: #f7f4ef;
+      --blanco: #ffffff;
+      --burdeos: #5e1b18;
+      --oliva: #4e5135;
+      --pizarra: #2f333a;
+      --texto: #232528;
+      --texto-suave: #55585e;
+      --borde: #e3dcd0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--arena-claro);
+      color: var(--texto);
+      line-height: 1.65;
+    }
+
+    header {
+      background-color: var(--burdeos);
+      color: var(--blanco);
+      text-align: center;
+      padding: 40px 20px 34px;
+      border-bottom: 4px solid var(--arena);
+    }
+
+    header h1 {
+      font-size: clamp(1.75rem, 5vw, 2.45rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      color: var(--arena);
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    .franja-visual {
+      width: 100%;
+      height: 165px;
+      overflow: hidden;
+      border-bottom: 4px solid var(--oliva);
+      background-color: var(--pizarra);
+    }
+
+    .franja-visual img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 58%;
+      display: block;
+    }
+
+    main {
+      max-width: 780px;
+      margin: 28px auto 48px;
+      padding: 0 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .card {
+      background-color: var(--blanco);
+      border-radius: 14px;
+      padding: 24px 26px;
+      border: 1px solid var(--borde);
+      border-left: 6px solid var(--burdeos);
+      box-shadow: 0 4px 14px rgba(47, 51, 58, 0.05);
+    }
+
+    .card.oliva {
+      border-left-color: var(--oliva);
+    }
+
+    .card.pizarra {
+      border-left-color: var(--pizarra);
+    }
+
+    .card h2 {
+      color: var(--burdeos);
+      font-size: 1.32rem;
+      margin-bottom: 12px;
+    }
+
+    .card.oliva h2 {
+      color: var(--oliva);
+    }
+
+    .card.pizarra h2 {
+      color: var(--pizarra);
+    }
+
+    .card p {
+      color: var(--texto);
+      margin-bottom: 11px;
+    }
+
+    .card p:last-child {
+      margin-bottom: 0;
+    }
+
+    ul.lista {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    ul.lista li {
+      padding: 11px 14px;
+      background-color: var(--arena-claro);
+      border-radius: 8px;
+      border: 1px solid var(--borde);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .badge {
+      background-color: var(--oliva);
+      color: var(--blanco);
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 999px;
+    }
+
+    .sin-enlace {
+      color: var(--texto-suave);
+      font-size: 0.85rem;
+      font-style: italic;
+    }
+
+    a {
+      color: var(--burdeos);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .btn-link {
+      display: inline-block;
+      background-color: var(--oliva);
+      color: var(--blanco);
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-size: 0.88rem;
+      font-weight: 600;
+    }
+
+    .btn-link:hover {
+      background-color: var(--pizarra);
+      text-decoration: none;
+    }
+
+    .contacto-item {
+      margin-bottom: 10px;
+    }
+
+    footer {
+      background-color: var(--pizarra);
+      color: var(--arena);
+      text-align: center;
+      padding: 24px 16px;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Karol Roque Ramos</h1>
+    <p>Administración de Negocios · Universidad Católica San Pablo (Arequipa)</p>
+  </header>
+
+  <div class="franja-visual" aria-hidden="true">
+    <img src="banner.jpg" alt="Vista panorámica de montañas y agua al atardecer" />
+  </div>
+
+  <main>
+    <!-- Sobre mí -->
+    <section class="card">
+      <h2>Sobre mí</h2>
+      <p>
+        Hola, soy <strong>Karol Roque Ramos</strong>, tengo <strong>21 años</strong> y actualmente curso el
+        <strong>sexto semestre</strong> de la carrera de <strong>Administración de Negocios</strong> en la
+        <strong>Universidad Católica San Pablo</strong> de Arequipa.
+      </p>
+      <p>
+        Tengo muchas ganas de aprender más herramientas de marketing para aplicarlas día a día en el trabajo y aportar a un gran cambio en mi región.
+      </p>
+      <p>
+        Me hace muy feliz aprender en equipo junto a mis compañeros de carrera; tengo un fuerte sentido de pertenencia y estoy orgullosa de mis raíces. Asimismo, agradezco llevar clases con mi docente de Introducción a la Computación, <strong>Ernesto Cuadros Vargas</strong> (<a href="mailto:ecuadros@ucsp.edu.pe">ecuadros@ucsp.edu.pe</a>).
+      </p>
+    </section>
+
+    <!-- Cursos -->
+    <section class="card oliva">
+      <h2>Cursos (6.º Semestre · Malla 2024)</h2>
+      <ul class="lista">
+        <li>
+          <span><strong>Introducción a la Computación</strong></span>
+          <span class="badge">Curso actual</span>
+        </li>
+        <li>
+          <span>Metafísica</span>
+          <span class="badge">Ciclo VI</span>
+        </li>
+        <li>
+          <span>Moral</span>
+          <span class="badge">Ciclo VI</span>
+        </li>
+        <li>
+          <span>Estadística para los Negocios</span>
+          <span class="badge">Ciclo VI</span>
+        </li>
+        <li>
+          <span>Investigación de Operaciones</span>
+          <span class="badge">Ciclo VI</span>
+        </li>
+        <li>
+          <span>Logística</span>
+          <span class="badge">Ciclo VI</span>
+        </li>
+        <li>
+          <span>Macroeconomía</span>
+          <span class="badge">Ciclo VI</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Relación de compañeros -->
+    <section class="card">
+      <h2>Mis compañeros</h2>
+      <p style="color: var(--texto-suave); font-size: 0.92rem; margin-bottom: 14px;">
+        Relación de compañeros y enlaces de referencia mutua:
+      </p>
+      <ul class="lista">
+        <li>
+          <span>Eduardo Isaac Rojas Juarez</span>
+          <a class="btn-link" href="https://eduardoisaacrojasjuarez.github.io/" target="_blank" rel="noopener">Ver página</a>
+        </li>
+        <li>
+          <span>Emely Mirella Anccari Lopez</span>
+          <a class="btn-link" href="https://emelyanccari-ops.github.io" target="_blank" rel="noopener">Ver página</a>
+        </li>
+        <li>
+          <span>Dominick Ray Apfata Llaique</span>
+          <a class="btn-link" href="https://dominickapfata-sudo.github.io/dominickrayapfatallaique.github.io/" target="_blank" rel="noopener">Ver página</a>
+        </li>
+        <li>
+          <span>Rafael Chirinos</span>
+          <a class="btn-link" href="https://rafaelchirinosaspauza.github.io/sitio-web-sobre-mi-/" target="_blank" rel="noopener">Ver página</a>
+        </li>
+        <li>
+          <span>Zafiro Shantal Quispe Alache</span>
+          <a class="btn-link" href="https://zafiroquispe-wq.github.io/" target="_blank" rel="noopener">Ver página</a>
+        </li>
+        <li>
+          <span>Nayeli Alexandra Ayta Asqui</span>
+          <a class="btn-link" href="https://nayeliayta-dev.github.io/" target="_blank" rel="noopener">Ver página</a>
+        </li>
+        <li>
+          <span>Breshia del Pilar Peralta Mamani</span>
+          <a class="btn-link" href="https://bre-pilar.github.io/Breshia-del-pilar-peralta-mamani/" target="_blank" rel="noopener">Ver página</a>
+        </li>
+        <li>
+          <span>Gerald Raphael Vilca Ramirez</span>
+          <a class="btn-link" href="https://roachsanders.github.io/Gerald-Raphael-Vilca-Ramirez/" target="_blank" rel="noopener">Ver página</a>
+        </li>
+        <li>
+          <span>Alexia Alisson Cayo Ccasa</span>
+          <a class="btn-link" href="https://alexiacayo19.github.io" target="_blank" rel="noopener">Ver página</a>
+        </li>
+        <li>
+          <span>Nayeli Yadira Ordoñez Asto</span>
+          <a class="btn-link" href="https://nayeliordonez.github.io/Nayeli-Ordonez-Asto/" target="_blank" rel="noopener">Ver página</a>
+        </li>
+        <li>
+          <span>Edgar Sebastian Calle Torres</span>
+          <a class="btn-link" href="https://polarberto.github.io/EDGAR-SEBASTIAN-CALLE-TORRES/" target="_blank" rel="noopener">Ver página</a>
+        </li>
+        <li>
+          <span>Franco Abdiel Salinas Rondon</span>
+          <a class="btn-link" href="https://francoabdielsalinasrondon.github.io" target="_blank" rel="noopener">Ver página</a>
+        </li>
+        <li>
+          <span>Carlos Fabian Huarachi Humora</span>
+          <a class="btn-link" href="https://carlosfabianhuarachihumora.github.io" target="_blank" rel="noopener">Ver página</a>
+        </li>
+        <li>
+          <span>Génesis Xiomara Mollocondo Kana</span>
+          <span class="sin-enlace">Enlace pendiente en hoja</span>
+        </li>
+        <li>
+          <span>Chiara Valentina Ticona Chata</span>
+          <a class="btn-link" href="https://chiaraticona-source.github.io/chiara-ticona.github.io/" target="_blank" rel="noopener">Ver página</a>
+        </li>
+        <li>
+          <span>Sebastian Andre Ochoa Ortiz</span>
+          <a class="btn-link" href="https://sebasochoa.github.io" target="_blank" rel="noopener">Ver página</a>
+        </li>
+        <li>
+          <span>Fernanda Zuñiga</span>
+          <a class="btn-link" href="https://fernandagzcj.github.io/fernandagabrielazunigacamacho.github.io/" target="_blank" rel="noopener">Ver página</a>
+        </li>
+        <li>
+          <span>Andrea Yadhira Paredes Meza</span>
+          <a class="btn-link" href="https://andrea-yadhira-portafolio.vercel.app/" target="_blank" rel="noopener">Ver página</a>
+        </li>
+        <li>
+          <span>Franco Urcapaza Valencia</span>
+          <a class="btn-link" href="https://francoluisurcapazavalencia.github.io" target="_blank" rel="noopener">Ver página</a>
+        </li>
+        <li>
+          <span>Omar Geancarlo Palomino Molina</span>
+          <a class="btn-link" href="https://omarpalomino-max.github.io/mi-primera-pagina-web/" target="_blank" rel="noopener">Ver página</a>
+        </li>
+        <li>
+          <span>Garcia Aguilar (nombre incompleto en hoja: arciaaguilar-ui.git)</span>
+          <a class="btn-link" href="https://diegogarciaaguilar-ui.github.io/pagina/" target="_blank" rel="noopener">Ver página</a>
+        </li>
+        <li>
+          <span>Franco Carlos</span>
+          <a class="btn-link" href="https://francocarlooss.github.io/francocarlooss.github.io/" target="_blank" rel="noopener">Ver página</a>
+        </li>
+        <li>
+          <span>Jorge Alvarez Benavente</span>
+          <a class="btn-link" href="https://jorgealvarezbenavente.github.io/Jorge-Enrique-Alvarez-Benavente/" target="_blank" rel="noopener">Ver página</a>
+        </li>
+        <li>
+          <span>Ismael Anderson Villanueva Apaza</span>
+          <a class="btn-link" href="https://mako20026.github.io/Ismael-Anderson-Villanueva-Apaza/" target="_blank" rel="noopener">Ver página</a>
+        </li>
+        <li>
+          <span>Michael Fabian Cadena Candua</span>
+          <a class="btn-link" href="https://michaelcadena-lp.github.io/" target="_blank" rel="noopener">Ver página</a>
+        </li>
+        <li>
+          <span>Luis Felipe Sandoval Charca</span>
+          <a class="btn-link" href="https://luis-felipe-sandoval-charca.vercel.app/" target="_blank" rel="noopener">Ver página</a>
+        </li>
+        <li>
+          <span>Ricardo Fabio Quispe Arámbulo</span>
+          <a class="btn-link" href="https://ricardoquispearambulo.github.io/sitio-web-sobre-mi-/" target="_blank" rel="noopener">Ver página</a>
+        </li>
+        <li>
+          <span>Alexis Joel Ramos Choque</span>
+          <a class="btn-link" href="https://l-alx-l.github.io/TFCienciasdelaComputacion.github.io/" target="_blank" rel="noopener">Ver página</a>
+        </li>
+        <li>
+          <span>Alejandro José Benavides Valdez</span>
+          <a class="btn-link" href="https://alejandrojoseben.github.io/alejandro-benavides/" target="_blank" rel="noopener">Ver página</a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Contacto -->
+    <section class="card pizarra">
+      <h2>Contacto</h2>
+      <p class="contacto-item">
+        <strong>Correo electrónico:</strong>
+        <a href="mailto:Karol.roque@ucsp.edu.pe">Karol.roque@ucsp.edu.pe</a>
+      </p>
+      <p class="contacto-item">
+        <strong>GitHub:</strong>
+        <a href="https://github.com/KarolRoque" target="_blank" rel="noopener">github.com/KarolRoque</a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 Karol Roque Ramos · Arequipa, Perú
+  </footer>
+
+</body>
+</html>
 
