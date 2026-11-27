@@ -3,19 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Página personal de Karol Roque Ramos, estudiante de Administración de Negocios en la Universidad Católica San Pablo (Arequipa, Perú)." />
-  <title>Karol Roque Ramos | Página Personal</title>
+  <meta name="description" content="Página personal de Karol Roque Ramos — Administración de Negocios, UCSP Arequipa." />
+  <title>Karol Roque Ramos | Perfil &amp; Portafolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --arena: #cfc2af;
-      --arena-claro: #f7f4ef;
-      --blanco: #ffffff;
-      --burdeos: #5e1b18;
-      --oliva: #4e5135;
-      --pizarra: #2f333a;
-      --texto: #232528;
-      --texto-suave: #55585e;
-      --borde: #e3dcd0;
+      --fondo: #f7f4ee;
+      --superficie: #ffffff;
+      --suave: #efeae0;
+      --tinta: #23201e;
+      --texto-sec: #5c5650;
+      --burdeos: #691e23;
+      --burdeos-hover: #52161a;
+      --oliva: #46573b;
+      --borde: #e5ded0;
     }
 
     * {
@@ -24,378 +27,402 @@
       padding: 0;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background-color: var(--arena-claro);
-      color: var(--texto);
+      font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--fondo);
+      color: var(--tinta);
       line-height: 1.65;
+      padding-bottom: 56px;
     }
 
-    header {
-      background-color: var(--burdeos);
-      color: var(--blanco);
-      text-align: center;
-      padding: 40px 20px 34px;
-      border-bottom: 4px solid var(--arena);
+    /* Menú superior moderno y limpio con acento vintage */
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(247, 244, 238, 0.88);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--borde);
     }
 
-    header h1 {
-      font-size: clamp(1.75rem, 5vw, 2.45rem);
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      margin-bottom: 8px;
-    }
-
-    header p {
-      color: var(--arena);
-      font-size: 1rem;
-      font-weight: 500;
-    }
-
-    .franja-visual {
-      width: 100%;
-      height: 165px;
-      overflow: hidden;
-      border-bottom: 4px solid var(--oliva);
-      background-color: var(--pizarra);
-    }
-
-    .franja-visual img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center 58%;
-      display: block;
-    }
-
-    main {
-      max-width: 780px;
-      margin: 28px auto 48px;
-      padding: 0 18px;
+    .topbar-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 12px 18px;
       display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    .card {
-      background-color: var(--blanco);
-      border-radius: 14px;
-      padding: 24px 26px;
-      border: 1px solid var(--borde);
-      border-left: 6px solid var(--burdeos);
-      box-shadow: 0 4px 14px rgba(47, 51, 58, 0.05);
-    }
-
-    .card.oliva {
-      border-left-color: var(--oliva);
-    }
-
-    .card.pizarra {
-      border-left-color: var(--pizarra);
-    }
-
-    .card h2 {
-      color: var(--burdeos);
-      font-size: 1.32rem;
-      margin-bottom: 12px;
-    }
-
-    .card.oliva h2 {
-      color: var(--oliva);
-    }
-
-    .card.pizarra h2 {
-      color: var(--pizarra);
-    }
-
-    .card p {
-      color: var(--texto);
-      margin-bottom: 11px;
-    }
-
-    .card p:last-child {
-      margin-bottom: 0;
-    }
-
-    ul.lista {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
       gap: 10px;
     }
 
-    ul.lista li {
-      padding: 11px 14px;
-      background-color: var(--arena-claro);
-      border-radius: 8px;
-      border: 1px solid var(--borde);
+    .brand {
+      font-family: "Fraunces", Georgia, serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--burdeos);
+      text-decoration: none;
+      letter-spacing: -0.01em;
+    }
+
+    .nav-group {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
       flex-wrap: wrap;
-      gap: 8px;
+      gap: 6px;
+    }
+
+    .nav-link {
+      text-decoration: none;
+      font-size: 0.84rem;
+      font-weight: 600;
+      color: var(--texto-sec);
+      padding: 7px 13px;
+      border-radius: 10px;
+      transition: background-color 0.16s ease, color 0.16s ease;
+    }
+
+    .nav-link:hover,
+    .nav-link:focus-visible {
+      background: var(--suave);
+      color: var(--burdeos);
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 24px auto 0;
+      padding: 0 18px;
+    }
+
+    /* Portada limpia con toque editorial vintage */
+    .hero {
+      background: var(--superficie);
+      border: 1px solid var(--borde);
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .banner-wrap {
+      width: 100%;
+      height: 195px;
+      background: linear-gradient(120deg, var(--burdeos), var(--oliva));
+    }
+
+    .banner-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .hero-content {
+      padding: 26px 26px 30px;
     }
 
     .badge {
-      background-color: var(--oliva);
-      color: var(--blanco);
+      display: inline-block;
       font-size: 0.78rem;
       font-weight: 600;
-      padding: 3px 10px;
+      color: var(--oliva);
+      background: #f1f5ee;
+      padding: 5px 12px;
       border-radius: 999px;
+      margin-bottom: 12px;
     }
 
-    .sin-enlace {
-      color: var(--texto-suave);
-      font-size: 0.85rem;
-      font-style: italic;
-    }
-
-    a {
-      color: var(--burdeos);
+    h1 {
+      font-family: "Fraunces", Georgia, serif;
+      font-size: clamp(2rem, 4.8vw, 2.85rem);
       font-weight: 600;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .btn-link {
-      display: inline-block;
-      background-color: var(--oliva);
-      color: var(--blanco);
-      padding: 6px 14px;
-      border-radius: 8px;
-      font-size: 0.88rem;
-      font-weight: 600;
-    }
-
-    .btn-link:hover {
-      background-color: var(--pizarra);
-      text-decoration: none;
-    }
-
-    .contacto-item {
+      line-height: 1.12;
+      letter-spacing: -0.02em;
+      color: var(--tinta);
       margin-bottom: 10px;
     }
 
-    footer {
-      background-color: var(--pizarra);
-      color: var(--arena);
-      text-align: center;
-      padding: 24px 16px;
+    .lead {
+      font-size: 0.98rem;
+      color: var(--texto-sec);
+      max-width: 68ch;
+      margin-bottom: 20px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+      background: var(--burdeos);
+      color: #ffffff;
       font-size: 0.9rem;
+      font-weight: 600;
+      padding: 11px 18px;
+      border-radius: 12px;
+      transition: background-color 0.16s ease, transform 0.15s ease;
+    }
+
+    .btn-primary:hover {
+      background: var(--burdeos-hover);
+      transform: translateY(-1px);
+    }
+
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+      background: var(--fondo);
+      color: var(--tinta);
+      border: 1px solid var(--borde);
+      font-size: 0.9rem;
+      font-weight: 600;
+      padding: 11px 18px;
+      border-radius: 12px;
+      transition: background-color 0.16s ease, transform 0.15s ease;
+    }
+
+    .btn-ghost:hover {
+      background: var(--suave);
+      transform: translateY(-1px);
+    }
+
+    /* Secciones */
+    section.card {
+      margin-top: 22px;
+      background: var(--superficie);
+      border: 1px solid var(--borde);
+      border-radius: 20px;
+      padding: 26px;
+      scroll-margin-top: 76px;
+    }
+
+    .card-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    h2 {
+      font-family: "Fraunces", Georgia, serif;
+      font-size: 1.65rem;
+      font-weight: 600;
+      color: var(--tinta);
+      letter-spacing: -0.01em;
+    }
+
+    .tag-count {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--burdeos);
+      background: #faefef;
+      padding: 4px 10px;
+      border-radius: 999px;
+      white-space: nowrap;
+    }
+
+    .intro-text {
+      color: var(--texto-sec);
+      font-size: 0.95rem;
+      margin-bottom: 16px;
+    }
+
+    /* Perfil tipo CV */
+    .cv-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+      gap: 14px;
+    }
+
+    .cv-box {
+      background: var(--fondo);
+      border: 1px solid var(--borde);
+      border-radius: 14px;
+      padding: 16px 18px;
+    }
+
+    .cv-box h3 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--burdeos);
+      margin-bottom: 6px;
+    }
+
+    .cv-box p,
+    .cv-box li {
+      font-size: 0.9rem;
+      color: var(--texto-sec);
+    }
+
+    .cv-box ul {
+      padding-left: 18px;
+    }
+
+    /* Cursos */
+    .courses-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 14px;
+    }
+
+    .course-card {
+      background: var(--fondo);
+      border: 1px solid var(--borde);
+      border-radius: 14px;
+      padding: 16px 18px;
+    }
+
+    .course-card strong {
+      display: block;
+      font-size: 0.96rem;
+      color: var(--tinta);
+      margin-bottom: 4px;
+    }
+
+    .course-card span {
+      font-size: 0.87rem;
+      color: var(--texto-sec);
+    }
+
+    /* Lista de compañeros */
+    .peers-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 10px;
+    }
+
+    .peer-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      text-decoration: none;
+      background: var(--fondo);
+      border: 1px solid var(--borde);
+      border-radius: 12px;
+      padding: 11px 14px;
+      color: var(--tinta);
+      transition: border-color 0.15s ease, background-color 0.15s ease, transform 0.15s ease;
+    }
+
+    .peer-item:hover {
+      background: #ffffff;
+      border-color: var(--burdeos);
+      transform: translateY(-1px);
+    }
+
+    .peer-meta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+    }
+
+    .peer-num {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--oliva);
+      background: #f1f5ee;
+      min-width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .peer-name {
+      font-size: 0.88rem;
+      font-weight: 600;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .peer-arrow {
+      color: var(--burdeos);
+      font-size: 0.9rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    /* Contacto y LinkedIn */
+    .contact-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .back-top {
+      display: inline-block;
+      margin-top: 18px;
+      font-size: 0.84rem;
+      font-weight: 600;
+      color: var(--texto-sec);
+      text-decoration: none;
+    }
+
+    .back-top:hover {
+      color: var(--burdeos);
+    }
+
+    @media (max-width: 560px) {
+      .hero-content,
+      section.card {
+        padding: 20px 18px;
+      }
     }
   </style>
 </head>
-<body>
-
-  <header>
-    <h1>Karol Roque Ramos</h1>
-    <p>Administración de Negocios · Universidad Católica San Pablo (Arequipa)</p>
+<body id="inicio">
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="#inicio">Karol Roque</a>
+      <nav class="nav-group" aria-label="Secciones principales">
+        <a class="nav-link" href="#sobre-mi">Sobre mí</a>
+        <a class="nav-link" href="#mis-cursos">Mis cursos</a>
+        <a class="nav-link" href="#companeros">Compañeros</a>
+        <a class="nav-link" href="#contacto">LinkedIn</a>
+      </nav>
+    </div>
   </header>
 
-  <div class="franja-visual" aria-hidden="true">
-    <img src="banner.jpg.HEIC" alt="Vista panorámica de montañas y agua al atardecer" />
-  </div>
+  <main class="container">
+    <article class="hero">
+      <div class="banner-wrap">
+        <img src="Baner.jpg.HEIC" alt="Banner personal de Karol Roque Ramos" />
+      </div>
+      <div class="hero-content">
+        <span class="badge">Administración de Negocios · 6.º Semestre · UCSP Arequipa</span>
+        <h1>Karol Imasumac Roque Ramos</h1>
+        <p class="lead">
+          Estudiante universitaria en Arequipa enfocada en gestión empresarial, análisis cuantitativo, organización de proyectos y presentación digital clara.
+        </p>
+        <div class="actions">
+          <a class="btn-primary" href="#companeros">Ver compañeros</a>
+          <a class="btn-ghost" href="#sobre-mi">Sobre mí (CV)</a>
+          <a class="btn-ghost" href="#mis-cursos">Mis cursos</a>
+        </div>
+      </div>
+    </article>
 
-  <main>
-    <!-- Sobre mí -->
-    <section class="card">
-      <h2>Sobre mí</h2>
-      <p>
-        Hola, soy <strong>Karol Roque Ramos</strong>, tengo <strong>21 años</strong> y actualmente curso el
-        <strong>sexto semestre</strong> de la carrera de <strong>Administración de Negocios</strong> en la
-        <strong>Universidad Católica San Pablo</strong> de Arequipa.
+    <!-- SOBRE MÍ / CV -->
+    <section id="sobre-mi" class="card">
+      <div class="card-head">
+        <h2>Sobre mí</h2>
+        <span class="tag-count">Perfil CV</span>
+      </div>
+      <p class="intro-text">
+        Soy Karol Roque Ramos, estudiante de sexto semestre de Administración de Negocios en la Universidad Católica San Pablo (UCSP). Me interesa unir la estructura administrativa, el análisis de datos y el diseño visual sobrio para desarrollar proyectos ordenados y útiles.
       </p>
-      <p>
-        Tengo muchas ganas de aprender más herramientas de marketing para aplicarlas día a día en el trabajo y aportar a un gran cambio en mi región.
-      </p>
-      <p>
-        Me hace muy feliz aprender en equipo junto a mis compañeros de carrera; tengo un fuerte sentido de pertenencia y estoy orgullosa de mis raíces. Asimismo, agradezco llevar clases con mi docente de Introducción a la Computación, <strong>Ernesto Cuadros Vargas</strong> (<a href="mailto:ecuadros@ucsp.edu.pe">ecuadros@ucsp.edu.pe</a>).
-      </p>
-    </section>
-
-    <!-- Cursos -->
-    <section class="card oliva">
-      <h2>Cursos (6.º Semestre · Malla 2024)</h2>
-      <ul class="lista">
-        <li>
-          <span><strong>Introducción a la Computación</strong></span>
-          <span class="badge">Curso actual</span>
-        </li>
-        <li>
-          <span>Metafísica</span>
-          <span class="badge">Ciclo VI</span>
-        </li>
-        <li>
-          <span>Moral</span>
-          <span class="badge">Ciclo VI</span>
-        </li>
-        <li>
-          <span>Estadística para los Negocios</span>
-          <span class="badge">Ciclo VI</span>
-        </li>
-        <li>
-          <span>Investigación de Operaciones</span>
-          <span class="badge">Ciclo VI</span>
-        </li>
-        <li>
-          <span>Logística</span>
-          <span class="badge">Ciclo VI</span>
-        </li>
-        <li>
-          <span>Macroeconomía</span>
-          <span class="badge">Ciclo VI</span>
-        </li>
-      </ul>
-    </section>
-
-    <!-- Relación de compañeros -->
-    <section class="card">
-      <h2>Mis compañeros</h2>
-      <p style="color: var(--texto-suave); font-size: 0.92rem; margin-bottom: 14px;">
-        Relación de compañeros y enlaces de referencia mutua:
-      </p>
-      <ul class="lista">
-        <li>
-          <span>Eduardo Isaac Rojas Juarez</span>
-          <a class="btn-link" href="https://eduardoisaacrojasjuarez.github.io/" target="_blank" rel="noopener">Ver página</a>
-        </li>
-        <li>
-          <span>Emely Mirella Anccari Lopez</span>
-          <a class="btn-link" href="https://emelyanccari-ops.github.io" target="_blank" rel="noopener">Ver página</a>
-        </li>
-        <li>
-          <span>Dominick Ray Apfata Llaique</span>
-          <a class="btn-link" href="https://dominickapfata-sudo.github.io/dominickrayapfatallaique.github.io/" target="_blank" rel="noopener">Ver página</a>
-        </li>
-        <li>
-          <span>Rafael Chirinos</span>
-          <a class="btn-link" href="https://rafaelchirinosaspauza.github.io/sitio-web-sobre-mi-/" target="_blank" rel="noopener">Ver página</a>
-        </li>
-        <li>
-          <span>Zafiro Shantal Quispe Alache</span>
-          <a class="btn-link" href="https://zafiroquispe-wq.github.io/" target="_blank" rel="noopener">Ver página</a>
-        </li>
-        <li>
-          <span>Nayeli Alexandra Ayta Asqui</span>
-          <a class="btn-link" href="https://nayeliayta-dev.github.io/" target="_blank" rel="noopener">Ver página</a>
-        </li>
-        <li>
-          <span>Breshia del Pilar Peralta Mamani</span>
-          <a class="btn-link" href="https://bre-pilar.github.io/Breshia-del-pilar-peralta-mamani/" target="_blank" rel="noopener">Ver página</a>
-        </li>
-        <li>
-          <span>Gerald Raphael Vilca Ramirez</span>
-          <a class="btn-link" href="https://roachsanders.github.io/Gerald-Raphael-Vilca-Ramirez/" target="_blank" rel="noopener">Ver página</a>
-        </li>
-        <li>
-          <span>Alexia Alisson Cayo Ccasa</span>
-          <a class="btn-link" href="https://alexiacayo19.github.io" target="_blank" rel="noopener">Ver página</a>
-        </li>
-        <li>
-          <span>Nayeli Yadira Ordoñez Asto</span>
-          <a class="btn-link" href="https://nayeliordonez.github.io/Nayeli-Ordonez-Asto/" target="_blank" rel="noopener">Ver página</a>
-        </li>
-        <li>
-          <span>Edgar Sebastian Calle Torres</span>
-          <a class="btn-link" href="https://polarberto.github.io/EDGAR-SEBASTIAN-CALLE-TORRES/" target="_blank" rel="noopener">Ver página</a>
-        </li>
-        <li>
-          <span>Franco Abdiel Salinas Rondon</span>
-          <a class="btn-link" href="https://francoabdielsalinasrondon.github.io" target="_blank" rel="noopener">Ver página</a>
-        </li>
-        <li>
-          <span>Carlos Fabian Huarachi Humora</span>
-          <a class="btn-link" href="https://carlosfabianhuarachihumora.github.io" target="_blank" rel="noopener">Ver página</a>
-        </li>
-        <li>
-          <span>Génesis Xiomara Mollocondo Kana</span>
-          <span class="sin-enlace">Enlace pendiente en hoja</span>
-        </li>
-        <li>
-          <span>Chiara Valentina Ticona Chata</span>
-          <a class="btn-link" href="https://chiaraticona-source.github.io/chiara-ticona.github.io/" target="_blank" rel="noopener">Ver página</a>
-        </li>
-        <li>
-          <span>Sebastian Andre Ochoa Ortiz</span>
-          <a class="btn-link" href="https://sebasochoa.github.io" target="_blank" rel="noopener">Ver página</a>
-        </li>
-        <li>
-          <span>Fernanda Zuñiga</span>
-          <a class="btn-link" href="https://fernandagzcj.github.io/fernandagabrielazunigacamacho.github.io/" target="_blank" rel="noopener">Ver página</a>
-        </li>
-        <li>
-          <span>Andrea Yadhira Paredes Meza</span>
-          <a class="btn-link" href="https://andrea-yadhira-portafolio.vercel.app/" target="_blank" rel="noopener">Ver página</a>
-        </li>
-        <li>
-          <span>Franco Urcapaza Valencia</span>
-          <a class="btn-link" href="https://francoluisurcapazavalencia.github.io" target="_blank" rel="noopener">Ver página</a>
-        </li>
-        <li>
-          <span>Omar Geancarlo Palomino Molina</span>
-          <a class="btn-link" href="https://omarpalomino-max.github.io/mi-primera-pagina-web/" target="_blank" rel="noopener">Ver página</a>
-        </li>
-        <li>
-          <span>Garcia Aguilar (nombre incompleto en hoja: arciaaguilar-ui.git)</span>
-          <a class="btn-link" href="https://diegogarciaaguilar-ui.github.io/pagina/" target="_blank" rel="noopener">Ver página</a>
-        </li>
-        <li>
-          <span>Franco Carlos</span>
-          <a class="btn-link" href="https://francocarlooss.github.io/francocarlooss.github.io/" target="_blank" rel="noopener">Ver página</a>
-        </li>
-        <li>
-          <span>Jorge Alvarez Benavente</span>
-          <a class="btn-link" href="https://jorgealvarezbenavente.github.io/Jorge-Enrique-Alvarez-Benavente/" target="_blank" rel="noopener">Ver página</a>
-        </li>
-        <li>
-          <span>Ismael Anderson Villanueva Apaza</span>
-          <a class="btn-link" href="https://mako20026.github.io/Ismael-Anderson-Villanueva-Apaza/" target="_blank" rel="noopener">Ver página</a>
-        </li>
-        <li>
-          <span>Michael Fabian Cadena Candua</span>
-          <a class="btn-link" href="https://michaelcadena-lp.github.io/" target="_blank" rel="noopener">Ver página</a>
-        </li>
-        <li>
-          <span>Luis Felipe Sandoval Charca</span>
-          <a class="btn-link" href="https://luis-felipe-sandoval-charca.vercel.app/" target="_blank" rel="noopener">Ver página</a>
-        </li>
-        <li>
-          <span>Ricardo Fabio Quispe Arámbulo</span>
-          <a class="btn-link" href="https://ricardoquispearambulo.github.io/sitio-web-sobre-mi-/" target="_blank" rel="noopener">Ver página</a>
-        </li>
-        <li>
-          <span>Alexis Joel Ramos Choque</span>
-          <a class="btn-link" href="https://l-alx-l.github.io/TFCienciasdelaComputacion.github.io/" target="_blank" rel="noopener">Ver página</a>
-        </li>
-        <li>
-          <span>Alejandro José Benavides Valdez</span>
-          <a class="btn-link" href="https://alejandrojoseben.github.io/alejandro-benavides/" target="_blank" rel="noopener">Ver página</a>
-        </li>
-      </ul>
-    </section>
-
-    <!-- Contacto -->
-    <section class="card pizarra">
-      <h2>Contacto</h2>
-      <p class="contacto-item">
-        <strong>Correo electrónico:</strong>
-        <a href="mailto:Karol.roque@ucsp.edu.pe">Karol.roque@ucsp.edu.pe</a>
-      </p>
-      <p class="contacto-item">
-        <strong>GitHub:</strong>
-        <a href="https://github.com/KarolRoque" target="_blank" rel="noopener">github.com/KarolRoque</a>
-      </p>
-    </section>
-  </main>
-
-  <footer>
-    © 2026 Karol Roque Ramos · Arequipa, Perú
-  </footer>
-
-</body>
-</html>
-
+      <div
